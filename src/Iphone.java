@@ -4,6 +4,22 @@ import interfaces.ReprodutorMusical;
 
 public class Iphone implements ReprodutorMusical, AparelhoTelefonico, NavegadorInternet{
 
+    public Iphone() {
+        ligarIphone();
+    }
+
+    public void ligarIphone() {
+        System.out.println("Ligando Iphone....");
+        try {
+            wait(2000);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        System.out.println("Iphone ligado. Seja bem vindo!");
+        System.out.println("O que voce deseja fazer?");
+    }
+
     @Override
     public void exibirPagina() {
         System.out.println("Exibindo página");
@@ -22,38 +38,41 @@ public class Iphone implements ReprodutorMusical, AparelhoTelefonico, NavegadorI
 
     @Override
     public void ligar() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'ligar'");
+        System.out.println("Ligando....");
     }
 
     @Override
     public void atender() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'atender'");
+        System.out.println("Atendendo ligação....");
     }
 
     @Override
     public void iniciarCorreioVoz() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'iniciarCorreioVoz'");
+        System.out.println("Iniciando correio de voz....");
     }
 
     @Override
     public void tocar() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'tocar'");
+        System.out.println("Tocando música....");
     }
 
     @Override
     public void pausar() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'pausar'");
+        System.out.println("Pausando a música....");
     }
 
     @Override
     public void selecionarMusica() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'selecionarMusica'");
+        System.out.println("Selecionando a música....");
+    }
+
+    public static void main(String[] args) {
+        
+        Iphone meuIphone = new Iphone();
+
+        
+        
+
     }
     
 }
